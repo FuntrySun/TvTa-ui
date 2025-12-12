@@ -4,8 +4,8 @@ import { createDiscreteApi } from 'naive-ui'
 const { message } = createDiscreteApi(['message'])
 
 const service = axios.create({
-  baseURL: 'http://localhost:8080', // Default Spring Boot port
-  timeout: 5000
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080',
+  timeout: Number(import.meta.env.VITE_API_TIMEOUT) || 5000
 })
 
 service.interceptors.request.use(

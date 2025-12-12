@@ -4,7 +4,7 @@ import en from './en'
 
 const i18n = createI18n({
   legacy: false, // 使用 Composition API
-  locale: 'zh-CN', // 默认语言
+  locale: import.meta.env.VITE_DEFAULT_LOCALE || 'zh-CN', // 默认语言
   fallbackLocale: 'en',
   messages: {
     'zh-CN': zhCN,
