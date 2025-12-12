@@ -1,0 +1,32 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "opener:default",
+    "shell:allow-open",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        { "name": "shutdown", "cmd": "shutdown", "args": true, "sidecar": false },
+        { "name": "reboot", "cmd": "reboot", "args": true, "sidecar": false },
+        { "name": "pmset", "cmd": "pmset", "args": true, "sidecar": false },
+        { "name": "rundll32", "cmd": "rundll32", "args": true, "sidecar": false },
+        { "name": "networksetup", "cmd": "networksetup", "args": true, "sidecar": false },
+        { "name": "netsh", "cmd": "netsh", "args": true, "sidecar": false },
+        { "name": "osascript", "cmd": "osascript", "args": true, "sidecar": false },
+        { "name": "powershell", "cmd": "powershell", "args": true, "sidecar": false },
+        { "name": "open", "cmd": "open", "args": true, "sidecar": false },
+        { "name": "getmac", "cmd": "getmac", "args": true, "sidecar": false }
+      ]
+    },
+    "notification:default",
+    "dialog:default",
+    "autostart:allow-enable",
+    "autostart:allow-disable",
+    "autostart:allow-is-enabled",
+    "os:default"
+  ]
+}
