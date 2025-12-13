@@ -7,7 +7,7 @@ const handleSelect = (key: string) => {
 </script>
 
 <template>
-  <n-dropdown trigger="hover" :options="supportLanguages" @select="handleSelect">
+  <n-dropdown trigger="hover" :options="supportLanguages" @select="handleSelect" style="border-radius: 16px;">
     <button class="icon-btn i-carbon-language text-xl" title="切换语言" />
   </n-dropdown>
 </template>
